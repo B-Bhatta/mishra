@@ -1,1 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyansh Mishra | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', // Blue-500
+                        secondary: '#1e293b', // Slate-800
+                        dark: '#0f172a', // Slate-900
+                        accent: '#60a5fa', // Blue-400
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #60a5fa; 
+        }
 
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-dark text-gray-300 font-sans antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b border-gray-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tighter">
+                        DM<span class="text-primary">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#experience" class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#projects" class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#skills" class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#contact" class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all">Contact Me</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-secondary" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#experience" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#projects" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#contact" class="text-primary font-bold block px-3 py-2 rounded-md text-base">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <!-- Background Elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-semibold tracking-wide">
+                Available for Roles in Process Control & Automation
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Divyansh Mishra</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400">
+                Instrumentation Engineer & Founder. Bridging the gap between 
+                <span class="text-white font-medium">Industrial Automation</span> and 
+                <span class="text-white font-medium">Innovative Product Leadership</span>.
+            </p>
+            <div class="mt-10 flex justify-center gap-4">
+                <a href="#contact" class="px-8 py-3 rounded-full bg-primary text-white font-semibold hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25">
+                    Get in Touch
+                </a>
+                <a href="#projects" class="px-8 py-3 rounded-full border border-gray-600 text-gray-300 font-semibold hover:border-white hover:text-white transition-all">
+                    View Work
+                </a>
+            </div>
+            
+            <div class="mt-12 flex justify-center space-x-6 text-2xl text-gray-500">
+                <a href="mailto:divyanshmishra2580@gmail.com" class="hover:text-white transition-colors"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-secondary/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-primary to-purple-500 rounded-2xl opacity-30 blur-lg"></div>
+                    <div class="relative bg-secondary p-8 rounded-2xl border border-gray-700">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <i class="fas fa-microchip text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Education</h3>
+                                <p class="text-sm text-gray-400">B.Tech in Instrumentation Engineering</p>
+                                <p class="text-xs text-gray-500">Jorhat Engineering College (2022-2026)</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                                <span class="text-gray-300">Location</span>
+                                <span class="text-white">Jorhat, Assam</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                                <span class="text-gray-300">Interest</span>
+                                <span class="text-white">IoT, SCADA, Startups</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">Languages</span>
+                                <span class="text-white">English, Hindi, Assamese</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">About Me</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        I am a final-year Instrumentation Engineering undergraduate combining technical expertise in 
+                        <span class="text-primary font-medium">Industrial Automation</span> and 
+                        <span class="text-primary font-medium">IoT</span> with strong product leadership.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        My journey involves taking concepts from ideation to execution. I've successfully validated market fit for a startup initiative, assembled a technical team, and delivered a functional MVP. I am experienced in embedded design, SCADA systems, and agile management, seeking to apply this unique blend of engineering precision and strategic initiative.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-secondary rounded-lg border border-gray-700 text-center">
+                            <span class="block text-3xl font-bold text-white mb-1">3rd</span>
+                            <span class="text-sm text-gray-400">Place in Hackathon</span>
+                        </div>
+                        <div class="p-4 bg-secondary rounded-lg border border-gray-700 text-center">
+                            <span class="block text-3xl font-bold text-white mb-1">MVP</span>
+                            <span class="text-sm text-gray-400">Product Launched</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Professional Experience</h2>
+            
+            <div class="relative border-l border-gray-700 ml-4 md:ml-1/2 space-y-12">
+                
+                <!-- Experience 1 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary border-4 border-dark"></div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div class="md:text-right md:pr-8 mb-2 md:mb-0">
+                            <h3 class="text-xl font-bold text-white">Founder</h3>
+                            <h4 class="text-primary font-medium">Serinovo AI</h4>
+                            <span class="text-sm text-gray-500 bg-secondary px-2 py-1 rounded inline-block mt-2">Aug 2025 - Present</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl hover:border-primary/50 transition-colors">
+                            <ul class="space-y-3 text-gray-400 text-sm list-disc list-inside marker:text-primary">
+                                <li>
+                                    <strong>Product Development:</strong> Conceptualized and led the development of an EdTech platform featuring an AI resume builder, portfolio maker, and mentorship hub.
+                                </li>
+                                <li>
+                                    <strong>Leadership:</strong> Validated market demand using user surveys (Google Forms) before building, then managed a technical team to successfully build the Minimum Viable Product (MVP).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-gray-600 border-4 border-dark"></div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div class="md:text-right md:pr-8 mb-2 md:mb-0 order-1">
+                            <!-- Placeholder for alignment on desktop -->
+                        </div>
+                        <div class="glass-card p-6 rounded-xl hover:border-primary/50 transition-colors order-2">
+                            <div class="md:hidden mb-4">
+                                <h3 class="text-xl font-bold text-white">Industrial Engineering Intern</h3>
+                                <h4 class="text-primary font-medium">Power Grid Corporation of India Limited</h4>
+                                <span class="text-sm text-gray-500 bg-secondary px-2 py-1 rounded inline-block mt-2">Jun 2025 - Jul 2025</span>
+                            </div>
+                            <ul class="space-y-3 text-gray-400 text-sm list-disc list-inside marker:text-primary">
+                                <li>Gained practical exposure to power transmission systems, substations, and grid operations.</li>
+                                <li>Learned about SCADA systems, load management, and high-voltage equipment while understanding safety and efficiency protocols.</li>
+                                <li>Bridged academic knowledge with real-world applications in the power sector.</li>
+                            </ul>
+                        </div>
+                         <!-- Desktop Title (Left Side) -->
+                        <div class="hidden md:block md:text-right md:pr-8 md:row-start-1">
+                            <h3 class="text-xl font-bold text-white">Industrial Engineering Intern</h3>
+                            <h4 class="text-primary font-medium">Power Grid Corporation of India</h4>
+                            <span class="text-sm text-gray-500 bg-secondary px-2 py-1 rounded inline-block mt-2">Jun 2025 - Jul 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-secondary/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center relative">
+                        <i class="fas fa-motorcycle text-6xl text-gray-600 group-hover:text-primary transition-colors"></i>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-bold border border-white px-4 py-2 rounded-full">Major Project</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Accident Detection for Solo Rider</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">IoT</span>
+                            <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">ESP32</span>
+                            <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">MPU6050</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">
+                            An IoT-based safety system designed to detect crashes using tilt and G-force analysis. It automates emergency alerts with live GPS coordinates to pre-registered contacts, significantly reducing response time.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center relative">
+                        <i class="fas fa-temperature-high text-6xl text-gray-600 group-hover:text-green-400 transition-colors"></i>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-bold border border-white px-4 py-2 rounded-full">Semester Project</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Industrial Environment Monitor</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">Cloud IoT</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">DHT22</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">ThingSpeak</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Built a continuous environmental monitoring system using DHT sensors and NodeMCU. Enables real-time remote monitoring via cloud dashboards (ThingSpeak/Firebase), suitable for smart agriculture and industrial storage.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Achievements -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Skills -->
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+                        <i class="fas fa-tools text-primary mr-3"></i> Technical Skills
+                    </h2>
+                    <div class="space-y-6">
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300 font-medium">IoT & Circuit Design</span>
+                                <span class="text-primary text-sm">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300 font-medium">MATLAB & LabVIEW</span>
+                                <span class="text-primary text-sm">Proficient</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300 font-medium">Embedded C / Arduino</span>
+                                <span class="text-primary text-sm">Proficient</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Tag Cloud -->
+                        <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-700">
+                            <span class="px-3 py-1 rounded-full bg-gray-800 text-gray-400 text-sm border border-gray-700">ESP32</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-800 text-gray-400 text-sm border border-gray-700">NodeMCU</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-800 text-gray-400 text-sm border border-gray-700">SCADA</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-800 text-gray-400 text-sm border border-gray-700">Firebase</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-800 text-gray-400 text-sm border border-gray-700">Sensors Interfacing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+                        <i class="fas fa-trophy text-yellow-500 mr-3"></i> Recognition
+                    </h2>
+                    <div class="glass-card p-6 rounded-xl border-l-4 border-yellow-500 mb-6">
+                        <h3 class="text-lg font-bold text-white">3rd Position - Codestellation</h3>
+                        <p class="text-sm text-yellow-500 font-semibold mb-2">Codewar 5.0 | Feb 2024</p>
+                        <p class="text-gray-400 text-sm">
+                            Secured podium finish in a 24-hour intensive hackathon organized by Assam Engineering College. Demonstrated rapid prototyping and team problem-solving under pressure.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl border-l-4 border-primary">
+                        <h3 class="text-lg font-bold text-white">Startup MVP Launch</h3>
+                        <p class="text-sm text-primary font-semibold mb-2">Serinovo AI</p>
+                        <p class="text-gray-400 text-sm">
+                            Successfully led a team from ideation to the launch of a functional MVP for an EdTech SaaS product, validating Product-Market Fit with real user data.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <section id="contact" class="py-20 bg-secondary/30 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Let's Connect</h2>
+            <p class="text-gray-400 mb-8">
+                I'm actively looking for opportunities in <span class="text-white">Process Control</span>, <span class="text-white">Automation</span>, and <span class="text-white">Product Roles</span>.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
+                <a href="mailto:divyanshmishra2580@gmail.com" class="flex items-center gap-3 px-6 py-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all border border-gray-700 hover:border-primary w-full md:w-auto">
+                    <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-xs text-gray-500">Email Me</p>
+                        <p class="text-white font-medium">divyanshmishra2580@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="tel:+919864181519" class="flex items-center gap-3 px-6 py-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all border border-gray-700 hover:border-green-500 w-full md:w-auto">
+                    <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-xs text-gray-500">Call Me</p>
+                        <p class="text-white font-medium">+91 98641 81519</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-gray-600 text-sm">
+                <p>&copy; 2025 Divyansh Mishra. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
